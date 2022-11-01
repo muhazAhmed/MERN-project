@@ -1,6 +1,16 @@
 import './App.css';
+import Header from './components/Header/Header';
+import Footer from './components/Footer/Footer';
+import LadingPage from './screens/ladingPage/LadingPage';
 
-const App = () => <><h1>Hello World! {}</h1></>
+const App = () => 
+<>
+<Header/>
+<main>
+  <LadingPage/>
+</main>
+<Footer/>
+</>
  
 
 export default App;
