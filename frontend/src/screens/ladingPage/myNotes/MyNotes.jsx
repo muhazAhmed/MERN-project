@@ -1,9 +1,18 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Button, Card } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import MainScreen from "../../../components/MainScreen";
+import axios from "axios"
 
 const MyNotes = () => {
+const fetchNotes = async() => {
+  const data = await axios.get('http://localhost:3000/api/notes')
+  console.log(data)
+}
+useEffect(() => {
+  fetchNotes()
+}, [])
+
   return (
     <MainScreen title="Welcome back Muhaz...">
       <Link to="createnote">
